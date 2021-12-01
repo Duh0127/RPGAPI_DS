@@ -22,6 +22,9 @@ namespace RpgApi.Controllers
         }
         
 
+
+        
+
         [HttpGet("GetArma")]
         public async Task<IActionResult> Get()
         {
@@ -35,6 +38,9 @@ namespace RpgApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+
+
 
 
         [HttpGet("{id}")]
@@ -51,10 +57,6 @@ namespace RpgApi.Controllers
                 
             }
         }
-
-
-
-
 
 
 
@@ -85,13 +87,6 @@ namespace RpgApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-
-
-
-
-
-
 
 
 

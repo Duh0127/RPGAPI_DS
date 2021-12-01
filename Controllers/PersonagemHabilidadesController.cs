@@ -92,13 +92,13 @@ namespace RpgApi.Controllers
         }
 
 
-       [HttpGet("{GetHabilidades}")]
+       [HttpGet("GetHabilidades")]
         public async Task<IActionResult> GetHabilidades()
         {
             try
             {
-                List<Habilidade> habilidades =  new List<Habilidade>();
-                habilidades = await _context.Habilidades.ToListAsync();
+                List<Habilidade> habilidades = new List<Habilidade>();
+                habilidades =  await _context.Habilidades.ToListAsync();
 
                 return Ok(habilidades);
             }
@@ -106,6 +106,7 @@ namespace RpgApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
+
         }
 
         
